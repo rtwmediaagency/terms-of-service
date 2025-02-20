@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTW Media Agency - Terms</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-logo {
+            height: 40px;
+            margin: 0 auto;
+        }
+
+        .menu-button {
+            font-size: 16px;
+            color: #fff;
+            background: #ff0055;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+            position: absolute;
+            right: 20px;
+        }
+
+        .menu-button:hover {
+            background: #ff6600;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu a:hover {
+            background: #333;
+            border-radius: 5px;
+        }
+
+        .menu a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 50px auto;
+            padding: 25px;
+            background: #111;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00ffcc;
+        }
+
+        h2 {
+            color: #00ffcc;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .term {
+            margin: 20px 0;
+            padding: 20px;
+            background: #222;
+            border: 2px solid #00ffcc;
+            border-radius: 8px;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+        }
+
+        .term-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .term:hover {
+            box-shadow: 0 0 15px #00ffcc;
+        }
+
+        .term.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 30px #ffcc00;
+            background: gold;
+            color: black;
+        }
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff0055;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            animation: pulse 1.5s infinite;
+            text-transform: uppercase;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            background: #ff6600;
+        }
+
+        .contact-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://growwsociallps.github.io/rtwmediaagency.com/images/brandlogo2.png" alt="Logo" class="header-logo">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu" id="dropdownMenu">
+            <a href="https://rtwmediaagency.com"><img src="https://i.ibb.co/gLsBZ1Rz/5974636.png" alt="Home Icon">Home</a>
+            <a href="https://chat.whatsapp.com/Co1DEKlMcCt0Z0SHGn0T0P"><img src=https://i.ibb.co/YFM9hwYj/733585.png" alt="Home Icon">Join Group</a>
+            <a href="https://rtwmediaagency.com/#apihu-port-resume"><img src="https://i.ibb.co/vvMxNr3Q/18792963.png" alt="About Icon">About</a>
+            <a href="https://rtwmediaagency.com/#apihu-port-feature"><img src="https://i.ibb.co/DfftdF4Q/customer-service-1.png" alt="Services Icon">Services</a>
+            <a href="https://whatsapp.com/channel/0029VamzcGuDjiOjn0MsZf3h"><img src="https://i.ibb.co/Rxj9tkm/10384161.png" alt="Payment Proofs Icon">Payment Proof</a>
+            <a href="https://rtwmediaagency.com/#contact-details"><img src="https://i.ibb.co/fd3pTPNJ/14946653.png" alt="Contact Icon">Contact</a>
+            <a href="https://developer9444.github.io/rules-for-promotion/"><img src="https://i.ibb.co/0VGjK5Cy/3251383.png" alt=" Rules Of Promotion Icon">Rules For Promotion</a>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Welcome to RTW Media Agency</h2>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">01</span> 🚀 By engaging with RTW Media Agency and beginning work on rtwmediaagency.com, you automatically agree to all terms of service outlined herein. This agreement applies whether or not you have reviewed the terms in detail.
+        </div>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">02</span> 🎯 <strong>RTW Media Agency</strong> offers professional logo promotion and marketing services for businesses, influencers, and creators. All promotions are <strong>100% transparent</strong> and deliver genuine results. ✅
+        </div>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">03</span> 💰 Payments are <strong>guaranteed on time</strong> if all rules are followed. Once a promotion begins, no other brand promotions are allowed <strong>during its duration.</strong> ⏳
+        </div>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">04</span> 🏆 Clients retain <strong>all earnings</strong> from promotions without deductions or hidden fees. 💵
+        </div>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">05</span> ⚠️ Clients must follow <strong>RTW Media Agency's guidelines</strong> to qualify for promotions and payments. <strong>Non-compliance</strong> may lead to suspension or cancellation. ❌
+        </div>
+
+        <div class="term" onclick="activateTerm(this)">
+            <span class="term-number">06</span> 🔒 We ensure a <strong>scam-free, professional experience</strong>. Proof of work is always provided to guarantee <strong>service quality</strong>. 📜
+        </div>
+
+          <!-- Contact Button -->
+    <a href="https://chat.whatsapp.com/Co1DEKlMcCt0Z0SHGn0T0P" class="contact-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Contact Us
+    </a>
+    </div>
+
+<!-- Footer Section -->
+<footer style="background: #111; color: #fff; padding: 40px 20px; text-align: center; font-family: Arial, sans-serif;">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+        <!-- Left Section -->
+        <div style="flex: 1; min-width: 250px; text-align: left; margin-bottom: 20px;">
+            <h4>Thank you for exploring our website!</h4>
+            <p>We'd love to collaborate with you and bring your vision to life.</p>
+            <p>📧 Email us or connect with us on Instagram to get started.</p>
+            <p>✨ Let's work together to make your brand unforgettable!</p>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h4>Contact Info</h4>
+            <p>📧 rtwmediaagency@gmail.com</p>
+            <p>📍 Lucknow, India</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div style="flex: 1; min-width: 250px; text-align: left; margin-bottom: 20px;">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="https://rtwmediaagency.com" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/gLsBZ1Rz/5974636.png" alt="Home Icon" style="width: 20px; height: 20px; margin-right: 8px;">Home</a></li>
+                <li><a href="https://rtwmediaagency.com/#apihu-port-resume" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/vvMxNr3Q/18792963.png" alt="About Icon" style="width: 20px; height: 20px; margin-right: 8px;">About</a></li>
+                <li><a href="https://rtwmediaagency.com/#apihu-port-feature" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/DfftdF4Q/customer-service-1.png" alt="Services Icon" style="width: 20px; height: 20px; margin-right: 8px;">Services</a></li>
+                <li><a href="https://rtwmediaagency.com/#contact-details" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/fd3pTPNJ/14946653.png" alt="Contact Icon" style="width: 20px; height: 20px; margin-right: 8px;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <hr style="border-color: rgba(255, 255, 255, 0.2); margin: 20px 0;">
+    <p>&copy; 2020–2025 All rights reserved</p>
+
+     <!-- Social Icons -->
+    <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+        <a href="https://chat.whatsapp.com/Co1DEKlMcCt0Z0SHGn0T0P" target="_blank" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/jvN3Lz2N/phone.png" alt="WhatsApp Icon" style="width: 30px; height: 30px;"></a>
+        <a href="https://www.instagram.com/rtw_media_agency/" target="_blank" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/60KSL9VY/instagram.png" alt="Instagram Icon" style="width: 30px; height: 30px;"></a>
+        <a href="mailto:rtwmediaagency@gmail.com" target="_blank" style="color: #fff; text-decoration: none;"><img src="https://i.ibb.co/LzcDcGsC/gmail.png" alt="Email Icon" style="width: 30px; height: 30px;"></a>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+
+        function activateTerm(element) {
+            const terms = document.querySelectorAll('.term');
+            terms.forEach(term => term.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        document.querySelectorAll('.term').forEach(term => {
+            term.addEventListener('click', () => {
+                const activeTerms = document.querySelectorAll('.term.active');
+                activeTerms.forEach(activeTerm => {
+                    activeTerm.classList.remove('active');
+                });
+                term.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
