@@ -45,13 +45,9 @@
             right: 20px;
         }
 
-        .menu-button:hover {
-            background: #ff6600;
-        }
-
         .menu-button.active {
-            transform: scale(1.2);
-            box-shadow: 0 0 20px 5px darkgoldenrod;
+            transform: scale(1.2); /* Zoom-in effect */
+            box-shadow: 0 0 20px 5px darkgoldenrod; /* Glowing dark golden effect */
         }
 
         .menu {
@@ -110,7 +106,7 @@
             border-radius: 8px;
             font-size: 16px;
             position: relative;
-            transition: all 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
             cursor: pointer;
         }
 
@@ -123,6 +119,7 @@
         }
 
         .term:hover {
+            transform: scale(1.1);
             box-shadow: 0 0 15px #00ffcc;
         }
 
@@ -176,7 +173,7 @@
     <!-- Header Section -->
     <div class="header">
         <img src="https://growwsociallps.github.io/rtwmediaagency.com/images/brandlogo2.png" alt="Logo" class="header-logo">
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <button class="menu-button" id="menuButton" onclick="toggleMenu()">Menu</button>
         <div class="menu" id="dropdownMenu">
             <a href="https://rtwmediaagency.com"><img src="https://i.ibb.co/gLsBZ1Rz/5974636.png" alt="Home Icon">Home</a>
             <a href="https://chat.whatsapp.com/Co1DEKlMcCt0Z0SHGn0T0P"><img src=https://i.ibb.co/YFM9hwYj/733585.png" alt="Home Icon">Join Group</a>
@@ -266,29 +263,28 @@
 
     <script>
         function toggleMenu() {
+            const button = document.getElementById('menuButton');
             const menu = document.getElementById('dropdownMenu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
+
+            const isActive = button.classList.toggle('active');
+            menu.style.display = isActive ? 'flex' : 'none';
         }
+
+        document.addEventListener('click', function (event) {
+            const button = document.getElementById('menuButton');
+            const menu = document.getElementById('dropdownMenu');
+
+            if (!button.contains(event.target) && !menu.contains(event.target)) {
+                button.classList.remove('active');
+                menu.style.display = 'none';
+            }
+        });
 
         function activateTerm(element) {
             const terms = document.querySelectorAll('.term');
             terms.forEach(term => term.classList.remove('active'));
             element.classList.add('active');
         }
-
-        document.querySelectorAll('.term').forEach(term => {
-            term.addEventListener('click', () => {
-                const activeTerms = document.querySelectorAll('.term.active');
-                activeTerms.forEach(activeTerm => {
-                    activeTerm.classList.remove('active');
-                });
-                term.classList.add('active');
-            });
-        });
     </script>
 </body>
 </html>
