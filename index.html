@@ -40,13 +40,18 @@
             border-radius: 5px;
             padding: 8px 15px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: absolute;
             right: 20px;
         }
 
         .menu-button:hover {
             background: #ff6600;
+        }
+
+        .menu-button.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px 5px darkgoldenrod;
         }
 
         .menu {
